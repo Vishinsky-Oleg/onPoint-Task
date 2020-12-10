@@ -1,0 +1,10 @@
+@import "fonts";
+@import "config";
+
+// My style
+body {
+    background: salmon;
+    font-family: $gotham;
+}
+
+@import "media";
