@@ -1,0 +1,169 @@
+.third-right {
+    height: 100vh;
+    overflow: hidden;
+    background-image: url(../img/right-arrows.png);
+    background-repeat: no-repeat;
+    background-position: top 51% left 60%;
+    background-size: 55%;
+    font-size: 2rem;
+    position: relative;
+    &-img {
+        position: relative;
+        font-size: 5.5rem;
+        width: 65px;
+        height: 65px;
+        background-color: $fcolor;
+        border-radius: 50%;
+        object-fit: contain;
+        display: block;
+        text-align: center;
+    }
+    &-adds {
+        font-size: 1.6rem;
+        &--one {
+            @include posTopRight(56.5%, 38.5%);
+        }
+        &--two {
+            font-size: 2.5rem;
+            @include posTopRight(65%, 40%);
+        }
+        &--three {
+            @include posTopLeft(55%, 23%);
+        }
+    }
+    &-list {
+        @include posTopRight(43%, 6%);
+        // text-align: left;
+        list-style: none;
+        border-radius: 40px;
+        background: rgb(43, 48, 110);
+        height: 300px;
+        padding: 10px;
+        background: linear-gradient(
+            180deg,
+            rgba(43, 48, 110, 1) 28%,
+            rgba(4, 14, 39, 1) 100%
+        );
+        &-heading {
+            font-size: 1.5rem;
+            text-align: center;
+            padding: 15px 0;
+        }
+        &-item {
+            padding-bottom: 16px;
+            & > div {
+                text-align: left;
+                & > * {
+                    display: inline-block;
+                }
+            }
+        }
+    }
+    &-one {
+        @include posTopRight(16%, 43.5%);
+        &--img {
+            width: 90px;
+            height: 90px;
+            font-size: 8rem;
+        }
+    }
+    &-two {
+        @include posTopLeft(44%, 32%);
+        &--text {
+            width: 180px;
+            padding-left: 10px;
+        }
+    }
+    &-three {
+        @include posTopRight(44%, 30.5%);
+        &--text {
+            width: 180px;
+            padding-left: 10px;
+        }
+    }
+    &-four {
+        &--img {
+            @include picture(lipid, 75%);
+        }
+    }
+    &-five {
+        &--img {
+            @include picture(muscle, 75%);
+        }
+    }
+    &-six {
+        &--img {
+            @include picture(liver, 75%);
+        }
+    }
+    &-seven {
+        @include posTopRight(28%, 8%);
+        &--img {
+            @include picture(brain, 75%);
+        }
+    }
+    &-eight {
+        @include posTopLeft(26%, 7%);
+        &--text {
+            width: 180px;
+            padding-right: 10px;
+        }
+        &--img {
+            @include picture(guts, 75%);
+        }
+    }
+    &-nine {
+        @include posTopRight(39.5%, 69%);
+        &--text {
+            width: 280px;
+            padding-right: 10px;
+        }
+        &--img {
+            @include picture(immune, 75%);
+        }
+    }
+    &-ten {
+        @include posTopRight(62%, 69%);
+        &--text {
+            width: 280px;
+            padding-right: 10px;
+        }
+        &--img {
+            @include picture(stomach, 75%);
+        }
+    }
+    &-eleven {
+        @include posTopRight(75%, 45%);
+        &--text {
+            width: 280px;
+            padding-right: 10px;
+        }
+        &--img {
+            @include picture(kidney, 75%);
+        }
+    }
+    &-rocks {
+        &--one {
+            @include rockImage(8);
+            @include posTopLeft(12%, -0.5%);
+
+            width: 40px;
+            height: 40px;
+            opacity: 50%;
+        }
+        &--two {
+            @include rockImage(9);
+            @include posTopRight(25%, -1.5%);
+            width: 110px;
+            height: 110px;
+            opacity: 50%;
+        }
+        &--three {
+            @include rockImage(7);
+            @include posTopLeft(75%, 15%);
+            width: 190px;
+            height: 190px;
+            opacity: 80%;
+        }
+    }
+}

@@ -11,9 +11,23 @@
 
     &-control {
         //TODO
+        width: 60%;
+        z-index: 3;
+        font-size: 2rem;
+        font-family: $gotham;
+        &-range {
+            display: block;
+            width: 100%;
+        }
+        &-dates {
+            display: flex;
+            justify-content: space-between;
+            padding: 15px 0;
+        }
         position: absolute;
-        bottom: 0;
+        bottom: 15px;
         left: 50%;
+        transform: translateX(-50%);
     }
     &-heading {
         font-weight: lighter;
@@ -27,6 +41,22 @@
             font-size: 3.2rem;
             display: inline-block;
         }
+    }
+}
+#third-control-range {
+    appearance: none;
+    height: 13px;
+    background-color: $rcolor;
+    &::-webkit-slider-thumb {
+        appearance: none;
+        cursor: pointer;
+        height: 60px;
+        width: 50px;
+        z-index: 3;
+        position: relative;
+        background-image: url(../img/selector.png);
+        background-size: cover;
+        background-clip: border-box;
     }
 }
 

@@ -23,6 +23,7 @@ $scolor: #0d319c;
 $tcolor: #f68b21;
 $txcolor: #d04f34;
 $fcolor: #3f4380;
+$rcolor: #d1eaff;
 
 @mixin peak($name, $wh) {
     @keyframes #{$name} {

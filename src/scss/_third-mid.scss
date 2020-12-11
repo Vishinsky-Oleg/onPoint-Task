@@ -1,4 +1,5 @@
 .third-mid {
+    overflow: hidden;
     height: 100vh;
     background-image: url(../img/mid-arrows.png);
     background-repeat: no-repeat;
@@ -105,10 +106,10 @@
         }
         &--three {
             @include rockImage(6);
-            @include posTopLeft(65%, 3%);
+            @include posTopRight(72%, -7%);
             width: 220px;
             height: 220px;
-            opacity: 50%;
+            opacity: 35%;
         }
     }
 }
