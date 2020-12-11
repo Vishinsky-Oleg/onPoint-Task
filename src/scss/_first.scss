@@ -1,0 +1,26 @@
+.first {
+    position: relative;
+    color: $scolor;
+    height: 100vh;
+    background-image: url(../img/first.png);
+    background-position: center;
+    background-size: 100% 100%;
+    &-heading {
+        padding: 10% 8%;
+    }
+    &-peak {
+        font-size: 2rem;
+        &--high {
+            @include posTopRight(35%, 25%);
+        }
+        &--mid {
+            @include posTopLeft(50%, 22%);
+        }
+        &--lower {
+            @include posTopRight(62%, 14%);
+        }
+        &--lowest {
+            @include posTopLeft(65%, 37%);
+        }
+    }
+}

@@ -1,0 +1,44 @@
+@import "third-left";
+@import "third-mid";
+@import "third-right";
+
+.third {
+    position: relative;
+    background-image: url(../img/third.png);
+    // background-position: center;
+    // background-size: 100% 100%;
+    background-size: contain;
+
+    &-control {
+        //TODO
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+    }
+    &-heading {
+        font-weight: lighter;
+        font-size: 3.2rem;
+        padding-top: 8%;
+        padding-left: 8%;
+    }
+    &-text {
+        display: inline-block;
+        & > strong {
+            font-size: 3.2rem;
+            display: inline-block;
+        }
+    }
+}
+
+.image-bot,
+.image-top {
+    @include itemAlignFlow(center, column);
+}
+
+.image-right {
+    @include itemAlignFlow(right, row);
+}
+
+.image-left {
+    @include itemAlignFlow(left, row);
+}

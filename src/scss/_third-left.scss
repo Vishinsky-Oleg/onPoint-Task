@@ -1,0 +1,63 @@
+.third-left {
+    height: 100vh;
+    background-image: url(../img/left-arrows.png);
+    background-repeat: no-repeat;
+    background-position: top 58% left 55%;
+    background-size: 50%;
+    font-size: 2.3rem;
+    position: relative;
+    &-img {
+        position: relative;
+        font-size: 7rem;
+        width: 80px;
+        height: 80px;
+        background-color: $fcolor;
+        border-radius: 50%;
+        object-fit: contain;
+        display: block;
+    }
+    &-main {
+        border: 1px solid $mcolor;
+        display: inline-block;
+        padding: 35px 70px;
+        @include posTopLeft(61.5%, 38%);
+    }
+    &-one {
+        @include posTopLeft(26%, 47.5%);
+    }
+    &-two {
+        @include posTopLeft(53%, 18%);
+        &--img {
+            @include picture(muscle, 80%);
+        }
+    }
+    &-three {
+        @include posTopLeft(53%, 77%);
+        &--img {
+            @include picture(liver, 70%);
+        }
+    }
+    &-rocks {
+        &--one {
+            @include rockImage(0);
+            @include posTopRight(15%, 10%);
+            width: 40px;
+            height: 40px;
+            opacity: 50%;
+        }
+        &--two {
+            @include rockImage(2);
+            @include posTopRight(30%, 25%);
+            width: 110px;
+            height: 110px;
+            opacity: 50%;
+        }
+        &--three {
+            @include rockImage(6);
+            @include posTopLeft(65%, 3%);
+            width: 220px;
+            height: 220px;
+            opacity: 50%;
+        }
+    }
+}

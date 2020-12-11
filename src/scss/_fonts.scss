@@ -7,6 +7,14 @@
 }
 
 @font-face {
+    font-family: GothamPro;
+    src: url(../fonts/GothamPro-Light.ttf) format("truetype"),
+        url(../fonts/GothamPro-Light.woff) format("woff");
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
     font-family: Lato;
     src: url(../fonts/Lato-Medium.ttf) format("truetype"),
         url(../fonts/Lato-Medium.woff) format("woff");

@@ -1,0 +1,41 @@
+.second {
+    position: relative;
+    height: 100vh;
+    background-image: url(../img/second.png);
+    background-position: center;
+    background-size: 100% 100%;
+    &-heading {
+        font-weight: 300;
+        position: relative;
+        top: 30%;
+        width: 53%;
+        text-align: center;
+        margin: 0 auto;
+    }
+    &-rocks {
+        &--one {
+            @include rockImage(1);
+            @include posTopRight(5%, 0);
+            width: 160px;
+            height: 200px;
+        }
+        &--two {
+            @include rockImage(2);
+            @include posTopLeft(20%, 8%);
+            width: 50px;
+            height: 50px;
+        }
+        &--three {
+            @include rockImage(3);
+            @include posTopLeft(55%, 21%);
+            width: 90px;
+            height: 90px;
+        }
+        &--four {
+            @include rockImage(4);
+            @include posTopRight(75%, 26%);
+            width: 70px;
+            height: 70px;
+        }
+    }
+}
