@@ -6,7 +6,11 @@
     background-position: top 51% left 60%;
     background-size: 55%;
     font-size: 2rem;
-    position: relative;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    transform: translateX(200vw);
     &-img {
         position: relative;
         font-size: 5.5rem;
@@ -33,7 +37,6 @@
     }
     &-list {
         @include posTopRight(43%, 6%);
-        // text-align: left;
         list-style: none;
         border-radius: 40px;
         background: rgb(43, 48, 110);
@@ -109,7 +112,7 @@
             padding-right: 10px;
         }
         &--img {
-            @include picture(guts, 75%);
+            @include picture(guts, 65%);
         }
     }
     &-nine {
@@ -119,7 +122,7 @@
             padding-right: 10px;
         }
         &--img {
-            @include picture(immune, 75%);
+            @include picture(immune, 80%);
         }
     }
     &-ten {

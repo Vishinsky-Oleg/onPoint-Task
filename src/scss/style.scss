@@ -8,10 +8,9 @@
 @import "second";
 @import "third";
 
-
 .nav {
     position: fixed;
-    right: 40px;
+    right: 20px;
     top: 50%;
     transform: translateY(-50%);
     z-index: 3;
@@ -20,16 +19,19 @@
     &-list {
         list-style: none;
         &--item {
-            padding: 4px 0;
-        }
-        &--link {
-            display: inline-block;
-            width: 12px;
-            height: 12px;
+            margin: 15px 9px;
+            display: block;
+            width: 15px;
+            height: 15px;
             background-color: $mcolor;
             border-radius: 50%;
+            transition: all 0.5s ease-in-out;
+            cursor: pointer;
+            &.active {
+                background-color: $tcolor;
+            }
         }
-    }
+            }
 }
 
 .scroll {
