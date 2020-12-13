@@ -39,24 +39,32 @@ const slides = document.querySelectorAll(".slide");
         wheelOpt
     );
     // /////////////////////////////
-
     //SCROLLING
-    // localStorage.setItem("current", 0);
-    let translateY = 1;
-    // updateDots(localStorage.current);
+    let translateY;
+    if (!localStorage.current) {
+        localStorage.setItem("current", "");
+        translateY = 1;
+    } else {
+        translateY = parseInt(localStorage.current);
+        if (translateY > 1) {
+            updateDots(translateY - 1);
+            main.style.transform = `translateY(${-(translateY - 1) * 100}vh)`;
+        }
+    }
+
     let ready = true;
 
     function translateWheel(delta) {
         if (ready) {
-            if (delta > 0 && translateY < 5) {
+            if (delta > 0 && translateY < 3) {
                 ready = false;
                 main.style.transform = `translateY(${-translateY * 100}vh)`;
-                ++translateY;
+                updateTranslateY("+");
             } else if (delta < 0 && translateY > 1) {
                 ready = false;
-                --translateY;
+                updateTranslateY("-");
                 main.style.transform = `translateY(${
-                    -translateY * 100 + 100
+                    -(translateY - 1) * 100
                 }vh)`;
             }
             updateDots(translateY - 1);
@@ -67,7 +75,15 @@ const slides = document.querySelectorAll(".slide");
         }, params.delay);
     }
     ///////////////////////////////////////
-
+    function updateTranslateY(s) {
+        if (s === "+") {
+            ++translateY;
+            localStorage.current = translateY;
+        } else {
+            --translateY;
+            localStorage.current = translateY;
+        }
+    }
     //TOUCH EVENT HANDLING
     document.addEventListener(
         "touchstart",
@@ -122,7 +138,7 @@ const slides = document.querySelectorAll(".slide");
 
     function checkElement(elem) {
         if (elem === nav[0]) {
-            main.style.transform = `translateY(0vh)`;
+            main.style.transform = `translateY(0)`;
             main.style.transition = `all ${params.animateTime}s  ${params.animateTiming}`;
             translateY = 1;
             updateDots(0);
